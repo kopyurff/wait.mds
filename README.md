@@ -1,8 +1,8 @@
-                                      Library for supporting automation based on MS-DOS scripts
-                                                            wait.mds
+      Library for supporting automation based on MS-DOS scripts
+                             wait.mds
 
-                                                    Copyright (C) Anton Kopiev,
-                                                    GNU General Public License.
+                     Copyright (C) Anton Kopiev,
+                     GNU General Public License.
 
 
 INTRODUCTION
@@ -204,5 +204,5 @@ formed over several years to solve those automation problems that took place per
 use as is. To solve other similar automation problems, the set of library capabilities can be expanded or improved. For offers of financial
 support and project development, I am available at the following contacts:
 
-							                                 E-Mail:	kopyurff@yahoo.com, kopyurff@rambler.ru
-							                                 Mobile:	8-921-912-44-10
+                E-Mail:	kopyurff@yahoo.com, kopyurff@rambler.ru
+                Mobile:	8-921-912-44-10
