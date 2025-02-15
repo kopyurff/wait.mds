@@ -1,0 +1,101 @@
+{
+   "id": "01-F",
+   "type": "~f",
+   "predicate": "'wait.events.json'",
+   "timeout": "1000",
+   "begindate": "20200910120558"
+}
+{
+   "id": "02-C",
+   "type": "c",
+   "predicate": "'*tests*'"
+}
+{
+   "id": "03-P",
+   "type": "p",
+   "predicate": "'somenonexistentmodule'"
+}
+{
+   "id": "04-I",
+   "type": "~i",
+   "predicate": "u_apppid"
+}
+{
+   "id": "05-N",
+   "type": "n",
+   "predicate": "'#2A;'"
+}
+{
+   "id": "06-D",
+   "type": "d"
+}
+{
+   "id": "07-V",
+   "type": "~v",
+   "predicate": "'C:'"
+}
+{
+   "id": "08-U",
+   "type": "~u"
+}
+{
+   "id": "09-T",
+   "type": "~t"
+}
+{
+   "id": "10-M1",
+   "type": "m",
+   "predicate": "'for #25;y in #28;1 2#29; do if #25;y EQU 2 for /F #25;z in #28;#27;echo.#25;wds#5F;mtm#5F;par#25;#27;#29; do #28; set #22;#25;z#3D;0#22; #29; else set wds#5F;mtm#5F;par#3D;'"
+}
+{
+   "id": "11-M2",
+   "type": "m",
+   "predicate": "@mymacro"
+}
+{
+   "id": "12-A",
+   "type": "a",
+   "predicate": "'wait.events.json'?'r'"
+}
+{
+   "id": "13-L-APP",
+   "type": "l",
+   "predicate": "'WindowsForms10.Window.8.app'?'Form1'?'0'"
+}
+{
+   "id": "14-L-BUTTON",
+   "type": "l",
+   "predicate": "'BUTTON'?'Button1'?'8'?u_apphdl"
+}
+{
+   "id": "15-H",
+   "type": "h",
+   "predicate": "u_apphdl?'2'"
+}
+{
+   "id": "16-R",
+   "type": "r",
+   "predicate": "u_conhdl?'----  "Read this text"  ----'"
+}
+{
+   "id": "17-W",
+   "type": "w",
+   "predicate": "u_conhdl?'testvar'?'Text to read'"
+}
+{
+   "id": "18-S",
+   "type": "s",
+   "predicate": "u_apphdl"
+}
+{
+   "id": "19-BAD-PARAMETERS",
+   "type": "~p",
+   "predicate": "#22; #7E;hello 5 `#5E;#5E;#5E;#40;#23;#24;#7B;#7D;#5B;#7E;#5D;#3F;#2D;#5F;#7E"5E;#21;#5E;#21; 3#26;#3D;#7E;#3C;#3E;#09;world#7E; #22;?'wrong-item'"
+}
+{
+   "id": "20-ERROR",
+   "type": "w",
+   "predicate": "u_apphdl?'testvar'?'Text to read'",
+   "timeout": "20000",
+   "begindate": "22201213063340"
+}
