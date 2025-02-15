@@ -7,48 +7,28 @@
 
 INTRODUCTION
 
- The wait.mds library is a tool of automation support based on MS-DOS scripts. The entire spectra of library functionality is entirely contained
-in the file "wait.mds.bat", which can be used as an executable file for calling it from any local folder, as well as an installer for installing
-and registering the library. The library functionality is divided into external calls to internal procedures and event handling. The library also contains macro definitions (macros) that can be loaded into the context of the user's batch file for execution. Because the library's functionality is mainly intended to solve problems of automating certain actions on a local computer, it is intended for use on servers running Windows OS or for solving server problems on a local computer. For correct operation, it is recommended to use the library under a user with administrator rights.
+ The wait.mds library is a tool of automation support based on MS-DOS scripts. The entire spectra of library functionality is contained in the file "wait.mds.bat", which can be used as an executable file for calling it from any local folder, as well as an installer for installing and registering the library. The library functionality is divided into external calls of internal procedures and event handling. The library also contains macro definitions (macros) that can be loaded into the context of the user's batch file for execution. Because the library's functionality is mainly intended to solve problems of automating certain actions on a local computer, it is intended for use on servers running Windows OS or for solving server problems on a local computer. For correct operation, it is recommended to use the library under a user with administrator rights.
 
 LIBRARY INSTALLER
 
- The library file "wait.mds.bat" for its use generally does not require any pre-installation of software on Windows OS of all versions from XP to
-11 and can be used as is on any machine. As the user calls the library functionality elements, the required installation are made automatically
-in background. The exception is the required pre-installation of Microsoft .NET Framework 3.5 SP1 on Windows XP, because this OS does not have a
-pre-installed framework. Also, the OS security system must be configured for console applications to work. If these settings were not made, then
-they should either be made manually or the installer should be run for automatic configuration:
+ The library file "wait.mds.bat" for its use generally does not require any pre-installation of software on Windows OS of all versions from XP to 11 and can be used as is on any machine. As the user calls the library functionality elements, the required installation are made automatically in background. The exception is the required pre-installation of Microsoft .NET Framework 3.5 SP1 on Windows XP, because this OS does not have a pre-installed framework. Also, the OS security system must be configured for console applications to work. If these settings were not made, then they should either be made manually or the installer should be run for automatic configuration:
 
   	call wait.mds.bat /sub:install /install /all
-After manual or automatic configuration of settings, it is necessary to reboot computer for them to take effect. If you are installing, you will
-need to run it again after rebooting to complete it. As a result of the full installation, the subdirectory "wait.mds" will be created in the %ProgramFiles% folder, which will contain: a copy of the original library file; a lightweight version of the library in the file "wait.mds.lite.bat"; a web help file; a text file in console encoding with performance counters for the utility "typeperf.exe"; compiled and registered COM server files (x86/x64 depending on the bitness of the OS); the source code of the COM server in VB.NET and an auxiliary file in VBScript from the installer. Also, the environment variable %wait.mds% is registered to run the library "wait.mds.lite.bat" from any folder and a shortcut is created on the desktop for the web help file, which can also be opened using the keys "Ctrl-Alt-Shift-W".
+After manual or automatic configuration of settings, it is necessary to reboot computer for them to take effect. If you are installing, you will need to run it again after rebooting to complete it. As a result of the full installation, the subdirectory "wait.mds" will be created in the %ProgramFiles% folder, which will contain: a copy of the original library file; a lightweight version of the library in the file "wait.mds.lite.bat"; a web help file; a text file in console encoding with performance counters for the utility "typeperf.exe"; compiled and registered COM server files (x86/x64 depending on the bitness of the OS); the source code of the COM server in VB.NET and an auxiliary file in VBScript from the installer. Also, the environment variable %wait.mds% is registered to run the library "wait.mds.lite.bat" from any folder and a shortcut is created on the desktop for the web help file, which can also be opened using the keys "Ctrl-Alt-Shift-W".
 
-In addition to the "/all" key, it is also possible to install only the COM server with the "/vb" key, install only the performance counters with
-the "/tpc" key, and also install with the "/lib" key, which performs all the actions from the full installation, except for the actions during
-installations with two previous keys.
+In addition to the "/all" key, it is also possible to install only the COM server with the "/vb" key, install only the performance counters with the "/tpc" key, and also install with the "/lib" key, which performs all the actions from the full installation, except for the actions during installations with two previous keys.
 
 CALLS OF INTERNAL PROCEDURES
 
- External call of internal library procedures is implemented through a formatted first argument string, containing the prefix substring "/sub:"
-and a suffix substring containing name of procedure. The following arguments are arguments of internal procedures. The main procedures are the
-installer procedure, as well as the procedures "importMacros" and "unsetMacros" for loading and unloading macro definitions from the context of
-the user's batch file. The installed version of the library "wait.mds.lite.bat" does not have an installer procedure. A full description of
-external procedures is given in the web help file.
+ External call of internal library procedures is implemented through a formatted first argument string, containing the prefix substring "/sub:" and a suffix substring containing name of procedure. The following arguments are arguments of internal procedures. The main procedures are the installer procedure, as well as the procedures "importMacros" and "unsetMacros" for loading and unloading macro definitions from the context of the user's batch file. The installed version of the library "wait.mds.lite.bat" does not have an installer procedure. A full description of external procedures is given in the web help file.
 
 EVENT HANDLING
 
-Event handling is a library call with parameters that indicate that the batch file execution should be stopped until a certain change in the
-system is detected, after which it should continue run. A full description is given in the web help file, a short list of the types of events
-that can be monitored: appearance or disappearance of a file or folder; change in file or folder attributes; process start or exit; appearance
-or closing of a window with a title; change in network traffic; change in read/write intensity; change in free disk space; change in CPU load;
-change in process activity; change in window state (maximized/minimized, etc.); waiting for the specified text to appear in the console; waiting
-for the specified value of an environment variable in another console. A list of events from an external file in JSON format and custom events
-that are defined by a user-developed macro are also supported.
+Event handling is a library call with parameters that indicate that the batch file execution should be stopped until a certain change in the system is detected, after which it should continue run. A full description is given in the web help file, a short list of the types of events that can be monitored: appearance or disappearance of a file or folder; change in file or folder attributes; process start or exit; appearance or closing of a window with a title; change in network traffic; change in read/write intensity; change in free disk space; change in CPU load; change in process activity; change in window state (maximized/minimized, etc.); waiting for the specified text to appear in the console; waiting for the specified value of an environment variable in another console. A list of events from an external file in JSON format and custom events that are defined by a user-developed macro are also supported.
 
 IMPORTABLE MACRO DEFINITIONS
 
- Macro definitions are imported into the user's batch file context using a library external procedure. Their full description is provided in the
-web help file that is generated by the installer. List of library macro definitions:
+ Macro definitions are imported into the user's batch file context using a library external procedure. Their full description is provided in the web help file that is generated by the installer. List of library macro definitions:
    1.	@errorLevel		- sets the error level to a digital value in the user context;
    2.	@isok 			- compliance of imported macro with the delayed expansions state;
    3.	@exit 			- exits the call stack of batch files and procedures (labels); 
@@ -168,9 +148,7 @@ web help file that is generated by the installer. List of library macro definiti
 
 SET OF ADDITIONAL FILES FOR THE LIBRARY
 
- Additional files have been added to the wait.mds library to better meet the criteria for open source software, to document the components being
-installed, and, where necessary, to make it easier to work with its source code. For instance, an expanded macro definition can be temporarily
-moved to a local user file for tracing or used to examine library source code. The list of files with their relative locations is:
+ Additional files have been added to the wait.mds library to better meet the criteria for open source software, to document the components being installed, and, where necessary, to make it easier to work with its source code. For instance, an expanded macro definition can be temporarily moved to a local user file for tracing or used to examine library source code. The list of files with their relative locations is:
    1.	".\docs\Назначение и сигнатуры COM-функций библиотеки wait.mds.pdf" - description of the COM server in Russian;
    2.	".\docs\Purpose and signatures of COM functions of the wait.mds library.pdf" - description of COM server in English;
    3.	".\macros\macros.general.collapsed.bat" - complete list of collapsed definitions of general purpose macros;
@@ -199,10 +177,7 @@ moved to a local user file for tracing or used to examine library source code. T
 
 PROJECT STATUS, SUPPORT AND DEVELOPMENT
 
- The source code of the library is functional and can be used on Windows OS versions from XP to 11. The current set of library functionality was
-formed over several years to solve those automation problems that took place personally for me. This functional set is published here for general
-use as is. To solve other similar automation problems, the set of library capabilities can be expanded or improved. For offers of financial
-support and project development, I am available at the following contacts:
+ The source code of the library is functional and can be used on Windows OS versions from XP to 11. The current set of library functionality was formed over several years to solve those automation problems that took place personally for me. This functional set is published here for general use as is. To solve other similar automation problems, the set of library capabilities can be expanded or improved. For offers of financial support and project development, I am available at the following contacts:
 
                 E-Mail:	kopyurff@yahoo.com, kopyurff@rambler.ru
                 Mobile:	8-921-912-44-10
