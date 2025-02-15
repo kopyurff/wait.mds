@@ -177,7 +177,7 @@ SET OF ADDITIONAL FILES FOR THE LIBRARY
 
 PROJECT STATUS, SUPPORT AND DEVELOPMENT
 
- The source code of the library is functional and can be used on Windows OS versions from XP to 11. The current set of library functionality was formed over several years to solve those automation problems that took place personally for me. This functional set is published here for general use as is. To solve other similar automation problems, the set of library capabilities can be expanded or improved. For offers of financial support and project development, I am available at the following contacts:
+ The source code of the library is functional and can be used on Windows OS versions from XP to 11. The current set of library functionality was formed over several years to solve those automation problems that took place personally for me. This functional set is published here for general use as is. To solve other similar automation problems, the set of library capabilities can be expanded or improved. For proposals for support and development of the project, I am available at the following contacts:
 
                 E-Mail:	kopyurff@yahoo.com, kopyurff@rambler.ru
                 Mobile:	8-921-912-44-10
