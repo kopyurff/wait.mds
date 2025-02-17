@@ -12,9 +12,9 @@ INTRODUCTION
 LIBRARY INSTALLER
 
  The library file "wait.mds.bat" for its use generally does not require any pre-installation of software on Windows OS of all versions from XP to 11 and can be used as is on any machine. As the user calls the library functionality elements, the required installation are made automatically in background. The exception is the required pre-installation of Microsoft .NET Framework 3.5 SP1 on Windows XP, because this OS does not have a pre-installed framework. Also, the OS security system must be configured for console applications to work. If these settings were not made, then they should either be made manually or the installer should be run for automatic configuration:
-
-  	call wait.mds.bat /sub:install /install /all
-   
+                
+                call wait.mds.bat /sub:install /install /all
+                
 If the operating system required manual or automatic configuration of parameters, then it is necessary to reboot the computer for them to take effect. If you are installing, you will need to run it again after rebooting to complete it. As a result of the full installation, the subdirectory "wait.mds" will be created in the %ProgramFiles% folder, which will contain: a copy of the original library file; a lightweight version of the library in the file "wait.mds.lite.bat"; a HTML help file; a text file in console encoding with performance counters for the utility "typeperf.exe"; compiled and registered COM server files (x86/x64 depending on the bitness of the OS); the source code of the COM server in VB.NET and an auxiliary file in VBScript from the installer. Also, the environment variable %wait.mds% is registered to run the library "wait.mds.lite.bat" from any folder and a shortcut is created on the desktop for the HTML help file, which can also be opened using the keys "Ctrl-Alt-Shift-W".
 
 In addition to the "/all" key, it is also possible to install only the COM server with the "/vb" key, install only the performance counters with the "/tpc" key, and also install with the "/lib" key, which performs all the actions from the full installation, except for the actions during installations with two previous keys.
